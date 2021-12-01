@@ -1,0 +1,1 @@
+perl6 "$1"/raku/"$2".raku `cat "$1"/input`
