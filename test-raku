@@ -1,0 +1,4 @@
+#!usr/bin/env bash
+
+# run as `bash test-raku 2021/01 1` to run 2021 raku 1.raku with 2021/01/input
+raku "$1"/raku/"$2".raku < "$1"/input
