@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+
+rustfmt --config-path rustfmt.toml "$1"/rust/{1..2}.rs
