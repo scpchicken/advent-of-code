@@ -1,0 +1,15 @@
+#!usr/bin/env bash
+
+# bash test-rust 2021/01 1
+
+START_PATH=$PWD
+
+input=`cat ../_input/"$1"`
+main_toml_content=`cat main_cargo.toml`
+
+cd "$1"
+# ls
+echo "$main_toml_content" > Cargo.toml
+cargo run -- "$2" "$input"
+
+cd $PWD
