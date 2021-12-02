@@ -1,5 +1,0 @@
-#!usr/bin/env bash
-
-# run as `bash test-raku 2021/01 1` to run 2021 raku 1.raku with 2021/01/input
-
-rustc "$1"/rust/"$2".rs -o rust-exe && ./rust-exe < "$1"/input

@@ -1,6 +1,3 @@
 bruh.sh
-rust-exe
-
-# Added by cargo
-
-/target
+/rust/*/*/target/
+/rust/*/*/Cargo.lock
