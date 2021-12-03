@@ -2,6 +2,8 @@
 
 START_PATH="$PWD"
 
+input=`cat ../_sample/"$1"`
+
 cd src
 
 input=`cat "$START_PATH"/"$1"/bruh.txt`
