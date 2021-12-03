@@ -10,6 +10,10 @@ cd src
 [ "$2" = 1 ] && part="one"
 [ "$2" = 2 ] && part="two"
 
+start_time=`date +%s.%3N`
 ./Husk -uf "$START_PATH"/"$1"/"part_$part".husk "$input"
+end_time=`date +%s.%3N`
+
+awk '{print "\n---\n" "time:", $1-$2}' <<< "$end_time $start_time"
 
 cd $START_PATH
