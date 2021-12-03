@@ -1,0 +1,14 @@
+#!/usr/bin/env bash
+
+START_PATH="$PWD"
+
+cd src
+
+input=`cat "$START_PATH"/"$1"/bruh.txt`
+
+[ "$2" = 1 ] && part="one"
+[ "$2" = 2 ] && part="two"
+
+./Husk -uf "$START_PATH"/"$1"/"part_$part".husk "$input"
+
+cd $START_PATH
