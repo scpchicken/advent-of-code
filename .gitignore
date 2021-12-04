@@ -2,3 +2,4 @@ bruh.sh
 /rust/*/*/target/
 /rust/*/*/Cargo.lock
 /husk/*/*/*.husk.hs
+/*/bruh.txt

@@ -4,7 +4,7 @@
 
 START_PATH=$PWD
 
-input=`cat ../_input/"$1"`
+input=`cat ../_sample/"$1"`
 main_toml_content=`cat main_cargo.toml`
 
 cd "$1"
