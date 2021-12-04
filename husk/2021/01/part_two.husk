@@ -1,3 +1,6 @@
-₂mΣ₁3mr¶
-?:↑²⁰₁²↓1⁰øL⁰
-#0z≤¹↓1
+₂mΣ₁mr¶
+?:↑3⁰₁↓1⁰øL⁰
+#0z≤¹t
+"0: split on lines then read all lines to int and call line 1 func with that list then call line func 2"
+"1: ternary check if length of list is not zero then add first three elements with recursive call to line 1 func removing the first element from the list otherwise return empty list"
+"zip less or equal function (returns 0 if it's false) to the list with first element removed from list and that list then count the zeros there"

@@ -2,3 +2,7 @@
 *₃¹₂
 Σmor→f(="forward"←)
 Σmλ?r→⁰_r→⁰o="down"←⁰)f(≠"forward"←)
+"0: split on lines and map each line on splitting on space then call line func 1"
+"1: multiply the calling of line func 3 with last argument (appends copy of itself to end of line) and line func 2 with implicit last argument (from before)"
+"2: filter lines with forward and read the number on that line"
+"2: filter lines without forward and map down lines to num and up lines to -num"

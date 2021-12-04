@@ -1,2 +1,4 @@
 ₁mr¶
-#0z<⁰↓1⁰
+#0z<¹t
+"0: split on lines and convert all lines to integer then call line func 1"
+"1: zip the last argument passed (appends copy of itself to end of line) and the last argument (from before) after removing first elem by less than func (returns 0 if false) then count the number of zeros in there"

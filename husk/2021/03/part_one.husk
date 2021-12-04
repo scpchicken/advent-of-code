@@ -2,3 +2,7 @@
 *₃►¹₃◄
 i²λLf=⁰²)"01
 ḋm₂
+"0: split on lines, transpose the list, and call line func 1"
+"1: multiply calling of func 3 with maxlby func and last arg passed (appends copy of itself to end of line) and calling of func 3 with minlby func (implicit argument passed from before)"
+"2: maxlby/minlby the length of the filter of the mapping over string ❝01❞ and return digit of that char (0 or 1)"
+"3: map each line over line function 2 and then convert list of binary digits to a base 10 number"
