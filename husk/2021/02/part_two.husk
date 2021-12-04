@@ -1,3 +1,6 @@
+₁mw¶
+₂"forward"
+mor→fλ=⁴←⁰)
 "this one doesn't work yet :("
 ₁mw+¶⁰:"forward 0"ø0 0 0
 ?*⁶²₁t⁰+²μ?0="forward")←←⁰r←→⁰+⁴μ?²?_²0="up"⁰="down"⁰)←←⁰r←→⁰+⁴*⁴r←→⁰L⁰
@@ -18,3 +21,35 @@
 mλ!:0:_r→⁰:r→⁰ø€₃←⁰)
 mλ!:r→⁰:0:0ø€₃←⁰)
 z*∫₅¹∫₄
+
+wkejklwer lines
+
+₀	nul	₁	one	₂	two	₃	tre
+₄	for	₅	fiv	₆	six	₇	sev
+₈	ate	₉	nin
+¤"hello"
+¤	cur	combin	(y -> y -> z) -> (x -> y) -> x -> x -> z	Compose both arguments of binary function
+½	hlf	halve	TNum -> TNum	Divide by 2 (does not floor)
+islowr	TChar -> TNum	Is it a lowercase letter (returns codepoint or 0)
+halfL	[x] -> [[x]]	Split a list into two halves. If the length is odd, the first half will be longer.
+↕	ud	span	(Concrete y) => (x -> y) -> [x] -> ([x], [x])	Split at first value where function gives falsy result
+↑	up	take	TNum -> [x] -> [x]	Take n elements from list. Negative n takes from the end
+take2	[x] -> TNum -> [x]	Flipped version of take
+takew	(Concrete y) => (x -> y) -> [x] -> [x]	Longest prefix where function gives truthy result on each individual element
+↓	dow	drop	TNum -> [x] -> [x]	Drop n elements from list. Negative n drops from the end
+drop2	[x] -> TNum -> [x]	Flipped version of drop
+dropw	(Concrete y) => (x -> y) -> [x] -> [x]	Drop longest prefix where function gives truthy result on each individual element
+↔	lr	swap	(x, y) -> (y, x)	Swap a pair
+rev	[x] -> [x]	Reverse a list
+revnum	TNum -> TNum	Reverse the digits of a number
+←	lft	head	[x] -> x	First value of a list
+fst	(x, y) -> x	Left value of a pair
+predN	TNum -> TNum	Decrement number
+predC	TChar -> TChar	Decrement character
+→	rgt	last	[x] -> x	Last value of a list
+snd	(x, y) -> y	Right value of a pair
+succN	TNum -> TNum	Increment number
+succC	TChar -> TChar	Increment character
+
+↓ ↓
+"wjer"
