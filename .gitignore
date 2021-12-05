@@ -1,5 +1,7 @@
 bruh.sh
 /rust/*/*/target/
 /rust/*/*/Cargo.lock
+/rust/*/*/Cargo.toml
 /husk/*/*/*.husk.hs
 /*/bruh.txt
+add
