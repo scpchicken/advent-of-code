@@ -1,8 +1,8 @@
 use std::collections::HashMap;
 
 pub fn main(input: &String) {
-  let mut fish_hash: HashMap<isize, isize> = HashMap::new();
-  let mut baby_hash: HashMap<isize, isize> = HashMap::new();
+  let mut fish_hash: HashMap<isize, usize> = HashMap::new();
+  let mut baby_hash: HashMap<isize, usize> = HashMap::new();
 
   for num in input.split(",") {
     *fish_hash.entry(num.parse::<isize>().unwrap()).or_insert(0) += 1
