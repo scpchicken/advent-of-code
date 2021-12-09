@@ -35,6 +35,10 @@ for @input-arr -> Str:D $input {
       for [0, 1, 2, 3, 4, 5, 6, 7, 9] Z @segment-correct-arr -> ($ind, @correct) {
         %segment-hash{@correct[0].comb.sort.join} = $ind
       }
+
+      True
+    } else {
+      False
     }
   });
 
