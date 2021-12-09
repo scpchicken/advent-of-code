@@ -1,49 +1,42 @@
 use v6.d;
 
-my Str:D @input-arr = lines;
+# array to check segments are in the correct spot in permutation test
+my @segment-check-arr = <abcefg cf acdeg acdfg bcdf abdfg abdefg acf abcdefg abcdfg>;
+
+my &translate = -> @perm-arr, @segment-arr {
+  # translate perm array to abcdefg
+  my %trans-hash = (@perm-arr Z "abcdefg".comb).map(-> ($perm, $base) {$perm => $base}).List;
+
+  # translate the array and map to joined string
+  @segment-arr.trans(%trans-hash).words.map(-> $str {$str.comb.sort.join})
+}
+
+# function to check if 
+my &test = -> @perm-arr, @signal-arr {
+  @perm-arr.&translate(@signal-arr).all (elem) @segment-check-arr
+}
+
+# split each line into a signal and segment arrays
+my Array:D @input-arr = lines.map(-> $line {
+  $line.split(" | ").map({$^a.words}).Array
+});
 
 my Int:D $total = 0;
 
-# array to filter all the digits for permutation checking
-my Str:D @segment-check-arr = <012456 25 02346 02356 1235 01356 013456 025 012356>;
+# get the digit hash as a key value pair of sorted string and the index
+my %digits-hash{Str:D} of UInt:D = @segment-check-arr.kv.map(-> $ind, $segment {$segment.comb.sort.join => $ind});
 
-for @input-arr -> Str:D $input {
 
-  # store first part (signals) into array
-  my Str:D @signal-wire-arr = $input.split(" | ")[0].words;
-
-  # store last part (segments) into array
-  my Str:D @segment-arr = $input.split(" | ")[1].words;
-
+# iterate over input arr
+for @input-arr -> [@signal-arr, @segment-arr] {
   # declare a segment hash that will hold maps of signal to num
   my %segment-hash{Str:D} of UInt:D;
-
-  # iterate over all the permutations and store in array check
-  <d e a f g b c>.permutations.first(-> @check {
-
-    # iterate over segments and check if they have one mapping
-    my @segment-correct-arr = @segment-check-arr.map(-> $segment {
-      # keep only the indicies that are needed in that number
-      my @bruh = @check[$segment.comb>>.Int];
-
-      # iterate over signal wire array and save only the ones where the signal is the same as bruh
-      @signal-wire-arr.grep({$^a.comb.Set === @bruh.Set})
-    });
-
-    # check if the segment correct array is correct and then add to segment hash the correct signal to num mappings
-    if @segment-correct-arr.grep(*.elems) == 9 {
-      for [0, 1, 2, 3, 4, 5, 6, 7, 9] Z @segment-correct-arr -> ($ind, @correct) {
-        %segment-hash{@correct[0].comb.sort.join} = $ind
-      }
-
-      True
-    } else {
-      False
+  for <a b c d e f g>.permutations -> @perm-arr {
+    if @perm-arr.&test(@signal-arr) {
+      $total += @perm-arr.&translate(@segment-arr).map(-> $str {%digits-hash{$str}}).join.Int;
+      last
     }
-  });
-
-  # increment the total by the output values
-  $total += @segment-arr.map(-> $seg {%segment-hash{$seg.comb.sort.join} // 8}).join.Int;
+  }
 }
 
 # print the total

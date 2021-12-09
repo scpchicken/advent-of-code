@@ -5,4 +5,4 @@
 [ "$2" = 1 ] && part="one"
 [ "$2" = 2 ] && part="two"
 
-raku "$1"/"part_$part".raku < ../../_sample/"$1"
+raku "$1"/"part_$part".raku < ../../_sample/2021/"$1"
