@@ -1,3 +1,6 @@
 pub fn main(input: &String) {
-  println!("bruh{}ionput", input)
+  println!(
+    "{}",
+    input.chars().filter(|&c| c == '(').count() - input.chars().filter(|&c| c == ')').count()
+  )
 }

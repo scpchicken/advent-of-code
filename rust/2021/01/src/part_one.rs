@@ -1,4 +1,4 @@
-fn main(input: &String) {
+pub fn main(input: &String) {
   // parse each line into an integer and collect into vector of unsigned int
   let num_vec: Vec<usize> = input.lines().map(|s| s.parse::<usize>().unwrap()).collect();
 

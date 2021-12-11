@@ -1,0 +1,8 @@
+#!/bin/env bash
+
+# ./run 01 1
+
+[ "$2" = 1 ] && part="one"
+[ "$2" = 2 ] && part="two"
+
+raku "$1"/"part_$part".raku < ../../_input/2015/"$1"

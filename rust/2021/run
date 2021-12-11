@@ -1,0 +1,14 @@
+#!/bin/env bash
+
+# ./run 01 1 input
+
+START_PATH=$PWD
+
+input=`cat ../../_input/2021/"$1"/"$3"`
+main_toml_content=`cat ../main_cargo.toml`
+
+cd "$1"
+echo "$main_toml_content" > Cargo.toml
+cargo run -q -- "$2" "$input"
+
+cd $PWD

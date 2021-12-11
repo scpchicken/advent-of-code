@@ -1,9 +1,0 @@
-#!/usr/bin/env bash
-
-START_PATH=$PWD
-RUST_FMT_PATH=$PWD/rustfmt.toml
-
-cd "$1"/src
-rustfmt --config-path "$RUST_FMT_PATH" {part_one,part_two}.rs
-
-cd $PWD
