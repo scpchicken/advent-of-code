@@ -1,4 +1,4 @@
-#!usr/bin/env bash
+#!/bin/env bash
 
 # bash test-raku 2015/01 1
 # echo "HERE"
