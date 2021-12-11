@@ -4,4 +4,5 @@ bruh.sh
 /rust/*/*/Cargo.toml
 /husk/*/*/*.husk.hs
 /*/bruh.txt
+/*/*/bruh.txt
 add
