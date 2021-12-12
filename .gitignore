@@ -3,3 +3,4 @@ bruh
 /rust/*/*/Cargo.lock
 /rust/*/*/Cargo.toml
 /husk/*/*/*.husk.hs
+/raku/*/*/.precomp

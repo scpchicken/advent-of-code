@@ -7,10 +7,14 @@
 
 input=`cat ../../_input/2015/"$1"/"$3"`
 
+cd "$1"
+
 if [[ -n "$input" ]]
 then
-  echo "$input" | raku "$1"/"part_$part".raku
+  echo "$input" | raku "part_$part".raku
 else
   echo "input file empty"
   exit 69
 fi
+
+cd ..
