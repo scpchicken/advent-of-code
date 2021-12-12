@@ -5,4 +5,12 @@
 [ "$2" = 1 ] && part="one"
 [ "$2" = 2 ] && part="two"
 
-raku "$1"/"part_$part".raku < ../../_input/2021/"$1"
+input=`cat ../../_input/2021/"$1"/"$3"`
+
+if [[ -n "$input" ]]
+then
+  echo "$input" | raku "$1"/"part_$part".raku
+else
+  echo "input file empty"
+  exit 69
+fi
