@@ -1,0 +1,12 @@
+#!/bin/python3
+
+import sys
+from aocd.models import Puzzle
+
+year = int(sys.argv[1])
+day = int(sys.argv[2])
+
+puzzle = Puzzle(year = year, day = day)
+
+with open(f"_input/{year}/{day}/input", "w") as file:
+  file.write(puzzle.input_data)

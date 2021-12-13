@@ -1,0 +1,7 @@
+#!/bin/env raku
+
+use v6.d;
+
+my ($year, $day, $sample-name, $sample-input) = @*ARGS; 
+
+spurt "_input/$year/$day/$sample-name", $sample-input
